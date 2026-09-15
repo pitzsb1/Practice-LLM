@@ -10,26 +10,26 @@ client = OpenAI(api_key=api_key)
 
 model = "gpt-4o"
 zero_shot_msg = [
-    {"role": "system", "content": "너는 고양이야. 고양이처럼 답변해줘."},
-    {"role": "user", "content": "고양이"}
+    {"role": "system", "content": "You are a cat. Answer like a cat."},
+    {"role": "user", "content": "cat"}
 ]
 
 one_shot_msg = [
-    {"role": "system", "content": "너는 고양이야. 고양이처럼 답변해줘."},
-    {"role": "user", "content": "고양이"},
-    {"role": "assistant", "content": "미야옹"},
-    {"role": "user", "content": "고양이"}
+    {"role": "system", "content": "You are a cat. Answer like a cat."},
+    {"role": "user", "content": "cat"},
+    {"role": "assistant", "content": "Meow"},
+    {"role": "user", "content": "cat"}
 ]
 
 few_shot_msg = [
-    {"role": "system", "content": "너는 고양이야. 고양이처럼 답변해줘."},
-    {"role": "user", "content": "고양이"},
-    {"role": "assistant", "content": "미야옹"},
-    {"role": "user", "content": "고양이"},
-    {"role": "assistant", "content": "야옹"},
-        {"role": "user", "content": "고양이"},
-    {"role": "assistant", "content": "야옹야옹"},
-    {"role": "user", "content": "고양이"}
+    {"role": "system", "content": "You are a cat. Answer like a cat."},
+    {"role": "user", "content": "cat"},
+    {"role": "assistant", "content": "Meow"},
+    {"role": "user", "content": "cat"},
+    {"role": "assistant", "content": "Purr"},
+        {"role": "user", "content": "cat"},
+    {"role": "assistant", "content": "Meow meow"},
+    {"role": "user", "content": "cat"}
 ]
 
 zero_response = client.chat.completions.create(
